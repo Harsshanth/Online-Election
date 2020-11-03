@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Online Election</title>
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src ="login.js"></script>
+    </head>
+    
+    <body>
+        <img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/bg2.svg">
+        </div>
+        <div class="detail-content">
+         <form>
+            <img src="img/avatar.svg">
+            <h2 class="Details">Details</h2>
+            <label>Aadhaar Number:</label>
+            <span id="aadhaar"></span>
+            <br>
+            
+            <label>Voter Id:</label>
+            <span id="voterId"></span>
+            <br>
+            
+            <label>Migrated Location:</label>
+            <input type="text" class="input" id="migrate">
+            
+            <input type="submit" class="btn" value="Request"  onclick="return check()" >
+            <p>Kindly Note the Voting code after entering the location in alert</p>
+        
+         </form>
+
+        </div>
+<script>
+    document.getElementById("aadhaar").innerHTML = localStorage.getItem("aadhaar");
+    document.getElementById("voterId").innerHTML = localStorage.getItem("voterid");
+</script>
+
+
+    </body>
+</html>
